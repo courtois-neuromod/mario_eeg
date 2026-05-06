@@ -1,0 +1,26 @@
+﻿name	type	units	low_cutoff	high_cutoff	description	sampling_frequency	status	status_description
+EEG P3-Pz	EEG	µV	0.0	150.0	ElectroEncephaloGram	300.0	good	n/a
+EEG C3-Pz	EEG	µV	0.0	150.0	ElectroEncephaloGram	300.0	good	n/a
+EEG F3-Pz	EEG	µV	0.0	150.0	ElectroEncephaloGram	300.0	good	n/a
+EEG Fz-Pz	EEG	µV	0.0	150.0	ElectroEncephaloGram	300.0	good	n/a
+EEG F4-Pz	EEG	µV	0.0	150.0	ElectroEncephaloGram	300.0	good	n/a
+EEG C4-Pz	EEG	µV	0.0	150.0	ElectroEncephaloGram	300.0	good	n/a
+EEG P4-Pz	EEG	µV	0.0	150.0	ElectroEncephaloGram	300.0	good	n/a
+EEG Cz-Pz	EEG	µV	0.0	150.0	ElectroEncephaloGram	300.0	good	n/a
+CM	EEG	µV	0.0	150.0	ElectroEncephaloGram	300.0	good	n/a
+EEG A1-Pz	EEG	µV	0.0	150.0	ElectroEncephaloGram	300.0	good	n/a
+EEG Fp1-Pz	EEG	µV	0.0	150.0	ElectroEncephaloGram	300.0	good	n/a
+EEG Fp2-Pz	EEG	µV	0.0	150.0	ElectroEncephaloGram	300.0	good	n/a
+EEG T3-Pz	EEG	µV	0.0	150.0	ElectroEncephaloGram	300.0	good	n/a
+EEG T5-Pz	EEG	µV	0.0	150.0	ElectroEncephaloGram	300.0	good	n/a
+EEG O1-Pz	EEG	µV	0.0	150.0	ElectroEncephaloGram	300.0	good	n/a
+EEG O2-Pz	EEG	µV	0.0	150.0	ElectroEncephaloGram	300.0	good	n/a
+EEG X3-Pz	EEG	µV	0.0	150.0	ElectroEncephaloGram	300.0	good	n/a
+EEG X2-Pz	EEG	µV	0.0	150.0	ElectroEncephaloGram	300.0	good	n/a
+EEG F7-Pz	EEG	µV	0.0	150.0	ElectroEncephaloGram	300.0	good	n/a
+EEG F8-Pz	EEG	µV	0.0	150.0	ElectroEncephaloGram	300.0	good	n/a
+EEG X1-Pz	EEG	µV	0.0	150.0	ElectroEncephaloGram	300.0	good	n/a
+EEG A2-Pz	EEG	µV	0.0	150.0	ElectroEncephaloGram	300.0	good	n/a
+EEG T6-Pz	EEG	µV	0.0	150.0	ElectroEncephaloGram	300.0	good	n/a
+EEG T4-Pz	EEG	µV	0.0	150.0	ElectroEncephaloGram	300.0	good	n/a
+Trigger	TRIG	n/a	0.0	150.0	Trigger	300.0	good	n/a

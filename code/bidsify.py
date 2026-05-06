@@ -64,15 +64,15 @@ def main(args):
                 print(f'Found EEG file: {file} for subject {subject}, session {session}, task {task}, run {run}')
                 raw = read_raw_edf(os.path.join(root, file), preload=False, verbose=False)
                 write_raw_bids(raw, bidspath, overwrite=True)
-
-            elif file.endswith('.tsv'):
+    for root, folder, files in sorted(os.walk(sourcedata_dir)):
+        for file in files:
+            if file.endswith('.tsv'):
                 subject, session, task, run = parse_info_from_filename(file, filetype='events')
                 print(f'Found events file: {file} for subject {subject}, session {session}, task {task}, run {run}')
                 events_fname = f'sub-{subject}_ses-{session}_task-{task}_run-{run}_events.tsv'
                 os.makedirs(os.path.join(bidsroot, f'sub-{subject}', f'ses-{session}', 'gamelogs'), exist_ok=True)
                 os.makedirs(os.path.join(bidsroot, f'sub-{subject}', f'ses-{session}', 'eeg'), exist_ok=True)
                 events_data = pd.read_csv(os.path.join(root, file), sep='\t')
-
                 repetition_events = events_data[events_data['trial_type'] == 'gym-retro_game']
                 for idx_row, row in repetition_events.iterrows():
                     bk2_sourcename = row.stim_file.split('/')[-1]
@@ -81,7 +81,8 @@ def main(args):
                     bk2_destination = os.path.join(bidsroot, f'sub-{subject}', f'ses-{session}', 'gamelogs', f'sub-{subject}_ses-{session}_task-{task}_run-{run}_level-w{world}l{level}_rep-{rep}.bk2')
                     shutil.copy(bk2_sourcepath, bk2_destination)
                     events_data.loc[idx_row, 'stim_file'] = ('/').join(bk2_destination.split('/')[-4:])
-
+                    events_data.loc[idx_row, 'level'] = f'w{world}l{level}'
+                
                 events_data.to_csv(os.path.join(bidsroot, f'sub-{subject}', f'ses-{session}', 'eeg', events_fname), sep='\t', index=False)
     return
 
