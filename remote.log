@@ -1,0 +1,1 @@
+2c8469f5-46df-4ad8-a7bb-10b543ba0b1c autoenable=true bucket=cneuromod.mario-eeg.bids chunk=1GiB datacenter=US encryption=none host=s3.unf-montreal.ca name=unfs3.cneuromod.mario_eeg.bids port=443 protocol=https requeststyle=path storageclass=STANDARD type=S3 timestamp=1778184184s
